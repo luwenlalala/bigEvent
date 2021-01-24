@@ -21,9 +21,11 @@
       <div class="login">
         <form class="layui-form" action="">
           <div class="layui-form-item">
+            <!-- name的值要跟接口文档参数的值一致 -->
+            <i class="layui-icon layui-icon-username"></i>  
             <input
               type="text"
-              name="title"
+              name="username"
               required
               lay-verify="required"
               placeholder="请输入用户名"
@@ -32,11 +34,12 @@
             />
           </div>
           <div class="layui-form-item">
+            <i class="layui-icon layui-icon-password"></i>  
             <input
               type="password"
               name="password"
               required
-              lay-verify="required"
+              lay-verify="required|pass"
               placeholder="请输入密码"
               autocomplete="off"
               class="layui-input"
@@ -53,9 +56,11 @@
       <div class="regi">
         <form class="layui-form" action="">
           <div class="layui-form-item">
+            <i class="layui-icon layui-icon-username"></i>  
+
             <input
               type="text"
-              name="title"
+              name="username"
               required
               lay-verify="required"
               placeholder="请输入用户名"
@@ -64,6 +69,8 @@
             />
           </div>
           <div class="layui-form-item">
+            <i class="layui-icon layui-icon-password"></i>  
+
             <input
               type="password"
               name="password"
@@ -75,11 +82,13 @@
             />
           </div>
           <div class="layui-form-item">
+            <i class="layui-icon layui-icon-password"></i>  
+
               <input
               type="password"
-              name="password"
+              name="repassword"
               required
-              lay-verify="required|pass"
+              lay-verify="required|pass|repassword"
               placeholder="再次确认密码"
               autocomplete="off"
               class="layui-input"
@@ -94,7 +103,11 @@
     </div>
 
     <script src="/assets/lib/jquery.js"></script>
+    <script src="/assets/lib/layui/layui.all.js"></script>
     <script src="/assets/lib/axios.min.js"></script>
+    <script src="/assets/js/ajaxBase.js"></script>
+
+    <!-- 引入第三方的js文件,一定先引入第三方,最后我们自己写的介绍 -->
     <script src="/assets/js/login.js"></script>
   </body>
 </html>
