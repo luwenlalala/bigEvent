@@ -29,7 +29,7 @@ axios.interceptors.request.use(
 
 //  添加响应拦截器
 axios.interceptors.response.use(function (response) {
-  console.log(response);
+  // console.log(response);
     // 对响应数据做点什么
     if(response.data.status === 1 && response.data.message === '身份认证失败！') {
       //用户的身份认证失败

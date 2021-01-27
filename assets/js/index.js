@@ -1,5 +1,5 @@
 // =============================发送ajax请求获得用户信息===============================
-$(function () {
+
   function getUserInfo(){
 
     axios
@@ -26,7 +26,7 @@ $(function () {
 
     //如果有昵称则显示昵称.没有昵称,则显示usename 默认值 或运算
     let username = res.data.nickname || res.data.username;
-    
+    // console.log(username);
     $("#welcome").text("欢迎 " + username);
 
     //   判断有没有头像
@@ -37,6 +37,7 @@ $(function () {
     } else {
       //没有自己的头像,隐藏,展示文字头像
       $(".layui-nav-img").hide();
+      
       // 文字头像的文字是名字的第一个字符的大写
       let first = username[0].toUpperCase()
       $(".text_avatar").text(first).show();
@@ -60,4 +61,4 @@ $(function () {
       }
     );
   });
-});
+
